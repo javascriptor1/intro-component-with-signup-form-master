@@ -5,6 +5,7 @@
 *.sketch
 node_modules
 .netlify
+netlify.toml
 package-lock.json
 package.json
 style-guide.md
