@@ -50,7 +50,7 @@
 
       <!-- --------------- Second div start here ----------------------------- -->
       <div class="flex-1">
-        <p class="bg-Blue text-white py-5 px-5 font-bold rounded-2xl mb-[22px]">
+        <p class="bg-Blue text-white py-5 px-5 font-bold rounded-2xl mb-[22px] lg:text-center">
           Try it free 7 days
           <span class="text-[#d9d5fb] font-light"
             >then <br class="lg:hidden" />$20/mo. thereafter</span
@@ -61,34 +61,36 @@
           method="GET"
           class="min-h-[440px] bg-white rounded-2xl px-4"
         >
-          <div class="relative">
-            <input type="text" placeholder="First Name" />
-            <p class="error-message">First name cannot be empty</p>
-            <img src="images/icon-error.svg" alt="error icon" class="absolute top-[38%] right-[2.75rem]"/>
-          </div>
-          <div class="relative"><input type="text" placeholder="Last Name" />
-            <p class="error-message">Last name cannot be empty</p>
-            <img src="images/icon-error.svg" alt="error icon" class="absolute top-[38%] right-[2.75rem]"/>
-          </div>
-          <div class="relative"><input type="email" placeholder="Email Address" />
-            <p class="error-message">Looks like this is not an email</p>
-            <img src="images/icon-error.svg" alt="error icon" class="absolute top-[38%] right-[2.75rem]"/>
-          </div>
-          <div class="relative"><input type="password" placeholder="Password" />
-          
-            <p class="error-message">Password cannot be empty</p>
-            <img src="images/icon-error.svg" alt="error icon" class="absolute top-[38%] right-[2.75rem]" id="last-error-icon"/>
-          </div>
-          <button
-            class="uppercase bg-Green rounded-md p-[0.75em] pt-[1.5em] text-white w-full mt-2 font-semibold tracking-wider mb-4"
-          >
-            Claim your free trial
-          </button>
-          <p class="text-[10px] text-[#d2d1d7] font-semibold text-center">
-            By clicking the button, you are agreeing to
-            <br class="lg:hidden" />our
-            <span class="text-Red">Terms and Services</span>
-          </p>
+          <fieldset>
+            <div class="relative">
+              <input type="text" placeholder="First Name"/>
+              <p class="error-message">First name cannot be empty</p>
+              <img src="images/icon-error.svg" alt="error icon" class="absolute top-[38%] right-[2.75rem]"/>
+            </div>
+            <div class="relative"><input type="text" placeholder="Last Name" />
+              <p class="error-message">Last name cannot be empty</p>
+              <img src="images/icon-error.svg" alt="error icon" class="absolute top-[38%] right-[2.75rem]"/>
+            </div>
+            <div class="relative"><input type="email" placeholder="Email Address" />
+              <p class="error-message">Looks like this is not an email</p>
+              <img src="images/icon-error.svg" alt="error icon" class="absolute top-[38%] right-[2.75rem]"/>
+            </div>
+            <div class="relative"><input type="password" placeholder="Password" />
+            
+              <p class="error-message">Password cannot be empty</p>
+              <img src="images/icon-error.svg" alt="error icon" class="absolute top-[38%] right-[2.75rem]" id="last-error-icon"/>
+            </div>
+            <button
+              class="uppercase bg-Green rounded-md p-[0.75em] pt-[1.5em] text-white w-full mt-2 font-semibold tracking-wider mb-4"
+            >
+              Claim your free trial
+            </button>
+            <p class="text-[10px] text-[#d2d1d7] font-semibold text-center">
+              By clicking the button, you are agreeing to
+              <br class="lg:hidden" />our
+              <span class="text-Red">Terms and Services</span>
+            </p>
+          </fieldset>
         </form>
       </div>
     </main>
@@ -101,5 +103,7 @@
         >. Coded by <a href="#">MKF</a>
       </p>
     </footer>
+
+    <script src="main.js"></script>
   </body>
 </html>
