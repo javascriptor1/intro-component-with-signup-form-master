@@ -61,7 +61,5 @@ subscribeform[0].addEventListener("submit", (event) => {
   // if all forms filled with correct value , a post request will be sent to httpbing.org test server
   if (firstNameStatus && lastNameStatus && emailStatus && passowrdStatus) {
     subscribeform[0].submit();
-  } else {
-    alert("An error eccured. Try again later ⛔");
   }
 });

@@ -2,13 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-
 .error-message {
-  @apply italic text-right font-semibold text-xs text-Red border border-solid
+  @apply italic text-right font-semibold text-xs text-Red border border-solid;
 }
 
-
-main div > p:first-child {
+main div > p:first-child,
+form {
   box-shadow: 0px 7px 0px 0px #00000024;
 }
 
@@ -17,24 +16,28 @@ input {
   padding: 1em 1em;
   border: 1px solid rgb(199, 199, 199);
   border-radius: 8px;
-  /* border-color: #e1e1e1; */
-  border-color: #070707;
+  border-color: #e1e1e1;
   margin: 0.5em 0;
   width: 100%;
+  color: hsl(0, 100%, 74%);
+  font-weight: 700;
 }
 input::placeholder {
-    font-weight: 700;
-    color: hsl(240, 1%, 53%);
-    font-size: 0.875rem;
+  font-weight: 700;
+  color: hsl(240, 1%, 53%);
+  font-size: 0.875rem;
 }
 input:first-child {
-    margin-top: 1.5em;
+  margin-top: 1.5em;
 }
-input:focus{
-    outline-color: hsl(0, 100%, 74%);
-
+input:focus {
+  outline-color: hsl(0, 100%, 74%);
 }
 
 button {
-    box-shadow: 0 4px 0 0 hsl(154, 52%, 44%);
+  box-shadow: 0 4px 0 0 hsl(154, 52%, 44%);
+}
+
+button:hover {
+  background-color: hsl(154, 65%, 68%);
 }
