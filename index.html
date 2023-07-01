@@ -50,35 +50,60 @@
 
       <!-- --------------- Second div start here ----------------------------- -->
       <div class="flex-1">
-        <p class="bg-Blue text-white py-5 px-5 font-bold rounded-2xl mb-[22px] lg:text-center">
+        <p
+          class="bg-Blue text-white py-5 px-5 font-bold rounded-2xl mb-[22px] lg:text-center"
+        >
           Try it free 7 days
           <span class="text-[#d9d5fb] font-light"
             >then <br class="lg:hidden" />$20/mo. thereafter</span
           >
         </p>
         <form
-          action="/"
-          method="GET"
+          action="https://httpbin.org/post"
+          method="POST"
           class="min-h-[440px] bg-white rounded-2xl px-4"
+          novalidate
         >
           <fieldset>
             <div class="relative">
-              <input type="text" placeholder="First Name"/>
-              <p class="error-message">First name cannot be empty</p>
-              <img src="images/icon-error.svg" alt="error icon" class="absolute top-[38%] right-[2.75rem]"/>
+              <input type="text" placeholder="First Name"name="FirstName" />
+              <p class="error-message hidden">First name cannot be empty</p>
+              <img
+                src="images/icon-error.svg"
+                alt="error icon"
+                class="absolute top-[38%] right-[2.75rem] hidden"
+              />
             </div>
-            <div class="relative"><input type="text" placeholder="Last Name" />
-              <p class="error-message">Last name cannot be empty</p>
-              <img src="images/icon-error.svg" alt="error icon" class="absolute top-[38%] right-[2.75rem]"/>
+            <div class="relative">
+              <input type="text" placeholder="Last Name" name="LastName"/>
+              <p class="error-message hidden">Last name cannot be empty</p>
+              <img
+                src="images/icon-error.svg"
+                alt="error icon"
+                class="absolute top-[38%] right-[2.75rem] hidden"
+              />
             </div>
-            <div class="relative"><input type="email" placeholder="Email Address" />
-              <p class="error-message">Looks like this is not an email</p>
-              <img src="images/icon-error.svg" alt="error icon" class="absolute top-[38%] right-[2.75rem]"/>
+            <div class="relative">
+              <input type="email" placeholder="Email Address" name="Email"/>
+              <p class="error-message hidden">
+                Looks like this is not an email
+              </p>
+              <img
+                src="images/icon-error.svg"
+                alt="error icon"
+                class="absolute top-[38%] right-[2.75rem] hidden"
+              />
             </div>
-            <div class="relative"><input type="password" placeholder="Password" />
-            
-              <p class="error-message">Password cannot be empty</p>
-              <img src="images/icon-error.svg" alt="error icon" class="absolute top-[38%] right-[2.75rem]" id="last-error-icon"/>
+            <div class="relative">
+              <input type="password" placeholder="Password" name="Password"/>
+
+              <p class="error-message hidden">Password cannot be empty</p>
+              <img
+                src="images/icon-error.svg"
+                alt="error icon"
+                class="absolute top-[38%] right-[2.75rem] hidden"
+                id="last-error-icon"
+              />
             </div>
             <button
               class="uppercase bg-Green rounded-md p-[0.75em] pt-[1.5em] text-white w-full mt-2 font-semibold tracking-wider mb-4"

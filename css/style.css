@@ -574,6 +574,10 @@ video {
   display: grid;
 }
 
+.hidden {
+  display: none;
+}
+
 .min-h-\[440px\] {
   min-height: 440px;
 }
@@ -711,7 +715,6 @@ video {
 }
 
 .error-message {
-  display: none;
   border-width: 1px;
   border-style: solid;
   text-align: right;
@@ -721,10 +724,6 @@ video {
   font-style: italic;
   --tw-text-opacity: 1;
   color: hsl(0 100% 74% / var(--tw-text-opacity));
-}
-
-[src="images/icon-error.svg"] {
-  display: none;
 }
 
 main div > p:first-child {
@@ -794,6 +793,10 @@ button {
 
   .lg\:text-left {
     text-align: left;
+  }
+
+  .lg\:text-center {
+    text-align: center;
   }
 
   .lg\:text-5xl {
