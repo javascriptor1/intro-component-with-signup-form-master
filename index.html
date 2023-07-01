@@ -26,41 +26,42 @@
         text-align: center;
       }
       .attribution a {
-        color: hsl(228, 45%, 44%);
+        color: hsl(0, 0%, 90%);
       }
     </style>
   </head>
-  <body class="grid place-content-center min-h-screen">
-    <main class="flex flex-col">
+  <body class="grid place-content-center min-h-screen bg-mobile-bg bg-Red lg:bg-desktop-bg">
+    <main class="flex flex-col max-w-[328px] text-center mt-16">
       <!-- -------------- First div start here ------------------------------- -->
       <div>
-        <h1>Learn to code by watching others</h1>
-        <p>
+        <h1 class="text-white text-3xl font-bold mb-9">Learn to code by watching others</h1>
+        <p class="text-white mb-[70px]">
           See how experienced developers solve problems in real-time. Watching
           scripted tutorials is great, but understanding how developers think is
           invaluable.
         </p>
       </div>
+      
 
       <!-- --------------- Second div start here ----------------------------- -->
       <div>
-        <p>Try it free 7 days then $20/mo. thereafter</p>
-        <form action="/" method="GET">
+        <p class="bg-Blue text-white py-5 px-5 font-bold rounded-2xl mb-[22px]">Try it free 7 days <span class=" text-[#d9d5fb] font-light">then <br class="lg:hidden ">$20/mo. thereafter</span></p>
+        <form action="/" method="GET" class="min-h-[440px] bg-white rounded-2xl px-4">
           <input type="text" placeholder="First Name" />
           <input type="text" placeholder="Last Name" />
           <input type="email" placeholder="Email Address" />
           <input type="password" placeholder="Password" />
 
-          <button>Claim your free trial</button>
-          <p>
-            Byclicking the button, you are agreeing to our
-            <span>Terms and Services</span>
+          <button class="uppercase bg-Green  rounded-md p-[0.75em] pt-[1.5em] text-white w-full mt-2 font-semibold tracking-wider mb-4">Claim your free trial</button>
+          <p class="text-[10px] text-[#d2d1d7] font-semibold text-center">
+            By clicking the button, you are agreeing to <br class="lg:hidden">our
+            <span class="text-Red">Terms and Services</span>
           </p>
         </form>
       </div>
     </main>
 
-    <footer>
+    <footer class="mt-4">
       <p class="attribution">
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
