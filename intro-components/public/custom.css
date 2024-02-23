@@ -1,0 +1,13 @@
+body {
+  background-image: url("./images/bg-intro-mobile.png");
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  background-color: #ff7978;
+}
+
+@media (min-width: 768px) {
+  body {
+    background-image: url("./images/bg-intro-desktop.png");
+  }
+}
