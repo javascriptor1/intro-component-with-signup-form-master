@@ -38,7 +38,7 @@ const Subscription = () => {
       setPasswordField(true);
     }
 
-    if (userName && lastName && email && password) {
+    if (userName && lastName && emailField && password) {
       e.target.submit();
     }
   }
