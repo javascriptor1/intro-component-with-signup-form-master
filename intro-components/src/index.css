@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .error-message {
-  @apply italic text-right font-semibold text-xs text-red-400 border border-solid;
+  @apply italic text-right font-semibold text-xs text-red-400;
 }
 
 
@@ -42,4 +42,8 @@ button {
 
 button:hover {
   background-color: hsl(154, 65%, 68%);
+}
+
+.input-error{
+  border: 2px solid hsl(0, 100%, 74%);
 }

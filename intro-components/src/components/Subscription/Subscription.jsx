@@ -54,7 +54,7 @@ const Subscription = () => {
       <form
         action="https://httpbin.org/post"
         method="POST"
-        className="min-h-[440px] bg-white rounded-2xl px-8 mt-6"
+        className="bg-white rounded-2xl px-8 mt-6"
         noValidate
         onSubmit={handleSubmit}
       >
@@ -66,6 +66,7 @@ const Subscription = () => {
               name="FirstName"
               value={userName}
               onChange={(e) => setUserName(e.target.value)}
+              className={!userNameField && "input-error"}
             />
             <p className={userNameField ? "hidden" : "error-message"}>
               First name cannot be empty
@@ -85,6 +86,7 @@ const Subscription = () => {
               name="LastName"
               value={lastName}
               onChange={(e) => setLastName(e.target.value)}
+              className={!lastNameField && "input-error"}
             />
             <p className={lastNameField ? "hidden" : "error-message"}>
               Last name cannot be empty
@@ -104,6 +106,7 @@ const Subscription = () => {
               name="Email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              className={!emailField && "input-error"}
             />
             <p className={emailField ? "hidden " : "error-message"}>
               Looks like this is not an email
@@ -123,6 +126,7 @@ const Subscription = () => {
               name="Password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
+              className={!passwordField && "input-error"}
             />
 
             <p className={passwordField ? "hidden " : "error-message"}>
