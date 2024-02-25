@@ -26,7 +26,9 @@ const Subscription = () => {
     // check if email is valid or not
     const regex_pattern =
       /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    if (regex_pattern.test(email)) {
+    
+    const isEmailValid = regex_pattern.test(email)  
+      if (isEmailValid) {
       setEmailField(true);
     } else {
       setEmailField(false);
@@ -38,7 +40,7 @@ const Subscription = () => {
       setPasswordField(true);
     }
 
-    if (userName && lastName && emailField && password) {
+    if (userName && lastName && isEmailValid && password) {
       e.target.submit();
     }
   }
