@@ -1,10 +1,16 @@
 import { useState } from "react";
 
 const Subscription = () => {
-  const [userName, setUserName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [formData, setFormData] = useState({
+    userName: "",
+    lastName: "",
+    email: "",
+    password: "",
+  });
+  // const [userName, setUserName] = useState("");
+  // const [lastName, setLastName] = useState("");
+  // const [email, setEmail] = useState("");
+  // const [password, setPassword] = useState("");
   const [userNameField, setUserNameField] = useState(true);
   const [lastNameField, setLastNameField] = useState(true);
   const [emailField, setEmailField] = useState(true);
@@ -13,12 +19,12 @@ const Subscription = () => {
   function handleSubmit(e) {
     e.preventDefault();
 
-    if (!userName) {
+    if (!formData.userName) {
       setUserNameField(false);
     } else {
       setUserNameField(true);
     }
-    if (!lastName) {
+    if (!formData.lastName) {
       setLastNameField(false);
     } else {
       setLastNameField(true);
@@ -26,21 +32,26 @@ const Subscription = () => {
     // check if email is valid or not
     const regex_pattern =
       /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    
-    const isEmailValid = regex_pattern.test(email)  
-      if (isEmailValid) {
+
+    const isEmailValid = regex_pattern.test(formData.email);
+    if (isEmailValid) {
       setEmailField(true);
     } else {
       setEmailField(false);
     }
 
-    if (!password) {
+    if (!formData.password) {
       setPasswordField(false);
     } else {
       setPasswordField(true);
     }
 
-    if (userName && lastName && isEmailValid && password) {
+    if (
+      formData.userName &&
+      formData.lastName &&
+      isEmailValid &&
+      formData.password
+    ) {
       e.target.submit();
     }
   }
@@ -66,8 +77,10 @@ const Subscription = () => {
               type="text"
               placeholder="First Name"
               name="FirstName"
-              value={userName}
-              onChange={(e) => setUserName(e.target.value)}
+              value={formData.userName}
+              onChange={(e) =>
+                setFormData({ ...formData, userName: e.target.value })
+              }
               className={!userNameField && "input-error"}
             />
             <p className={userNameField ? "hidden" : "error-message"}>
@@ -86,8 +99,10 @@ const Subscription = () => {
               type="text"
               placeholder="Last Name"
               name="LastName"
-              value={lastName}
-              onChange={(e) => setLastName(e.target.value)}
+              value={formData.lastName}
+              onChange={(e) =>
+                setFormData({ ...formData, lastName: e.target.value })
+              }
               className={!lastNameField && "input-error"}
             />
             <p className={lastNameField ? "hidden" : "error-message"}>
@@ -106,8 +121,10 @@ const Subscription = () => {
               type="email"
               placeholder="Email Address"
               name="Email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              value={formData.email}
+              onChange={(e) =>
+                setFormData({ ...formData, email: e.target.value })
+              }
               className={!emailField && "input-error"}
             />
             <p className={emailField ? "hidden " : "error-message"}>
@@ -126,8 +143,10 @@ const Subscription = () => {
               type="password"
               placeholder="Password"
               name="Password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
+              value={formData.password}
+              onChange={(e) =>
+                setFormData({ ...formData, password: e.target.value })
+              }
               className={!passwordField && "input-error"}
             />
 
